@@ -8,6 +8,7 @@ import { CustomerList } from './pages/CustomerList';
 import { CustomerDetail } from './pages/CustomerDetail';
 import { OrderList } from './pages/OrderList';
 import { TemplateList } from './pages/TemplateList';
+import { MarketingHome } from './pages/MarketingHome';
 import { mockUsers, mockBusinesses, AuthContext } from './constants';
 
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
@@ -54,6 +55,7 @@ export default function App() {
     <AuthContext.Provider value={{ user, business, login, logout }}>
       <HashRouter>
         <Routes>
+          <Route path="/marketing" element={<MarketingHome />} />
           <Route path="/login" element={<Login />} />
           <Route
             path="/"
